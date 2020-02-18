@@ -66,7 +66,7 @@ class App extends Component {
       .then(this.setBookmarks)
       .catch(error => this.setState({ error }))
   }
-
+  
   render() {
     const { bookmarks } = this.state
     return (
@@ -77,7 +77,7 @@ class App extends Component {
           <Route
             path='/add-bookmark'
             render={({ history }) => {
-              // console.log(history)
+              console.log(history)
               return <AddBookmark
                 onAddBookmark={this.addBookmark}
                 onClickCancel={() => history.push('/')}
